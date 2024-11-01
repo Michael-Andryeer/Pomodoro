@@ -71,10 +71,8 @@ export function Home() {
               }
             })
           )
-
+          setActiveCycleId(null)
           setAmountSecondsPassed(totalSeconds)
-
-          clearInterval(interval)
         } else {
           setAmountSecondsPassed(secondsDifference)
         }
@@ -189,4 +187,3 @@ export function Home() {
     </HomeContainer>
   )
 }
- 
