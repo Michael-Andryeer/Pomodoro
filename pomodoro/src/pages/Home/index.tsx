@@ -73,10 +73,6 @@ export function Home() {
               }
             })
           )
-<<<<<<< HEAD
-=======
-          setActiveCycleId(null)
->>>>>>> eb0cb9e042126b6e60f1f9f95d0a96186a665c45
           setAmountSecondsPassed(totalSeconds)
         } else {
           setAmountSecondsPassed(secondsDifference)
