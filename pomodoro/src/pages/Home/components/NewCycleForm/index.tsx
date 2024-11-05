@@ -1,6 +1,12 @@
+import { useFormContext } from "react-hook-form";
 import { FormContainer, MinutesAmountInput,TasktInput } from "./styles";
+import { useContext } from "react";
+import { CyclesContext } from "../..";
 
 export function NewCycleForm() {
+   const {activeCycle} = useContext(CyclesContext)
+   const {register} = useFormContext()
+
   return (
     <FormContainer>
     <label htmlFor="task">Vou trabalhar em</label>
@@ -29,7 +35,6 @@ export function NewCycleForm() {
       disabled={!!activeCycle}
       {...register('minutesAmount', { valueAsNumber: true })}
     />
-
     <span>minutos.</span>
   </FormContainer>
   )
